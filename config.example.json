@@ -1,0 +1,9 @@
+{
+  "token": "YOUR_BOT_TOKEN_HERE",
+  "webhookURL": "YOUR_WEBHOOK_URL_HERE",
+  "ownerId": "YOUR_USER_ID",
+  "applicationId": "YOUR_APP_ID",
+  "rulesChannelId": "RULES_CHANNEL_ID",
+  "warningChannelId": "WARNING_CHANNEL_ID",
+  "statusChannelId": "STATUS_CHANNEL_ID"
+}
