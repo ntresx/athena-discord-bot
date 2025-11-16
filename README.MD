@@ -1,31 +1,31 @@
 ```markdown
 # 🌌 Athena Discord Bot
-Athena is a powerful multi-purpose Discord bot built using **Node.js** & **discord.js v14**.  
-This bot includes a full **moderation system**, **warnings**, **auto-mute**, **rules manager**, and a **status announcement embed** on startup.
+Athena is a powerful multi-purpose Discord bot built using Node.js & discord.js v14.  
+This bot includes a full moderation system, warnings, auto-mute, rules manager, and a status announcement embed on startup.
 
 ---
 
 ## 🚀 Features
 
 ### 🔧 Moderation Tools
-- `/warn add` – Add a warning to a user  
-- `/warn check` – Check warnings  
-- `/warn reset` – Reset user's warnings  
-- `/warn list` – Display all warned users  
+- /warn add – Add a warning to a user  
+- /warn check – Check warnings  
+- /warn reset – Reset user's warnings  
+- /warn list – Display all warned users  
 
 ### ⚠️ Auto Warning System
-Athena detects toxic words automatically:
+Athena detects toxic words automatically
 ```
-anjing, bangsat, kontol, memek
+
 ```
 If a user reaches:
-- **3 warnings** → Auto mute (1 hour)
+- 3 warnings → Auto mute (1 hour)
 - Auto unmute after mute duration
 
 ### 📝 Rules Manager
-- `/rules update` – Update server rules  
-- `/rules send` – Send rules into the rules channel  
-- Accepts multi-line input using `\n` or `|`
+- /rules update – Update server rules  
+- /rules send – Send rules into the rules channel  
+- Accepts multi-line input using \n or |
 
 ### 📢 Startup Status Embed
 Every time the bot turns on, it sends an embed:
@@ -34,11 +34,11 @@ Every time the bot turns on, it sends an embed:
 - Server count  
 - Bot avatar  
 - Cool intro text:  
-  **“✨ A GOD HAS ARRIVED! Athena has joined the server!”**
+  “✨ A GOD HAS ARRIVED! Athena has joined the server!”
 
 ### 🔒 Manual Mute Commands
-- `!mute @user 10m | 1h | 1d`  
-- `!unmute @user`
+- !mute @user 10m | 1h | 1d
+- !unmute @user
 
 ---
 
@@ -66,8 +66,8 @@ athena-discord-bot/
 npm install
 ```
 
-### 2️⃣ Create Your Own `config.json`
-Copy `config.example.json` then rename it to:
+### 2️⃣ Create Your Own config.json
+Copy config.example.json then rename it to:
 ```
 config.json
 ```
@@ -86,7 +86,7 @@ Fill it with your values:
 ```
 
 > ⚠️ **Never upload config.json!**  
-It is ignored by `.gitignore` for safety.
+It is ignored by .gitignore for safety.
 
 ---
 
@@ -111,10 +111,11 @@ Feel free to fork this repo and improve Athena.
 ---
 
 ## 📜 License
-This project is licensed under the **MIT License** — free to use, modify, and distribute.
+This project is licensed under the MIT License — free to use, modify, and distribute.
 
 ---
 
 ## ⭐ Support the Project
-If you like Athena, consider giving the repo a **star ⭐ on GitHub**!
+If you like Athena, consider giving the repo a star ⭐ on GitHub!
 ```
+
