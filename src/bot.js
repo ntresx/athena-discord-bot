@@ -90,21 +90,21 @@ const commands = [
   // RULES COMMAND
   new SlashCommandBuilder()
     .setName("rules")
-    .setDescription("Kelola rules server")
+    .setDescription("Manage rules server")
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
     .addSubcommand((sub) =>
       sub
         .setName("update")
-        .setDescription("Update isi rules server")
+        .setDescription("Update the server rules content")
         .addStringOption((o) =>
           o
             .setName("content")
-            .setDescription("Isi rules (gunakan \\n atau | untuk enter)")
+            .setDescription("Rules content (use \\n or | for enter)")
             .setRequired(true)
         )
     )
     .addSubcommand((sub) =>
-      sub.setName("send").setDescription("Kirim rules ke channel rules")
+      sub.setName("send").setDescription("Send rules to rules channel")
     )
     .toJSON(),
 
@@ -116,25 +116,25 @@ const commands = [
     .addSubcommand((sub) =>
       sub
         .setName("add")
-        .setDescription("Tambahkan warning ke user")
+        .setDescription("Add a warning to user")
         .addUserOption((o) =>
           o
             .setName("target")
-            .setDescription("User yang mau diwarn")
+            .setDescription("user who wants to be warned")
             .setRequired(true)
         )
         .addStringOption((o) =>
-          o.setName("reason").setDescription("Alasan warning").setRequired(true)
+          o.setName("reason").setDescription("Warning reasons").setRequired(true)
         )
     )
     .addSubcommand((sub) =>
       sub
         .setName("check")
-        .setDescription("Cek warning user")
+        .setDescription("Check user warning")
         .addUserOption((o) =>
           o
             .setName("target")
-            .setDescription("User yang dicek")
+            .setDescription("User that you want to check")
             .setRequired(true)
         )
     )
@@ -145,19 +145,19 @@ const commands = [
         .addUserOption((o) =>
           o
             .setName("target")
-            .setDescription("User yang direset")
+            .setDescription("User that you want to reset")
             .setRequired(true)
         )
     )
     .addSubcommand((sub) =>
-      sub.setName("list").setDescription("List semua user yang punya warning")
+      sub.setName("list").setDescription("List all user that have warnings")
     )
     .toJSON(),
 
   // STATUS COMMAND
   new SlashCommandBuilder()
     .setName("status")
-    .setDescription("Cek status bot")
+    .setDescription("Check status bot")
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
     .toJSON(),
 ];
@@ -171,7 +171,7 @@ const rest = new REST({ version: "10" }).setToken(token);
   try {
     console.log("Mengupload slash commands...");
     await rest.put(
-      Routes.applicationGuildCommands(applicationId, "1439238396416495699"), // <=== SERVER ID
+      Routes.applicationGuildCommands(applicationId, "1234567890"), // <=== SERVER ID
       { body: commands }
     );
     console.log("Slash commands uploaded!");
@@ -411,7 +411,7 @@ client.on("interactionCreate", async (interaction) => {
       );
       rules = newRules;
 
-      return interaction.editReply("✅ Rules berhasil diupdate!");
+      return interaction.editReply("✅ rules successfully updated");
     }
 
     // SEND RULES
